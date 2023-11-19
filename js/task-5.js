@@ -16,32 +16,18 @@
 // }
 // 3. Пошук найбільшого числа: Створіть масив чисел і використайте цикл для
 //    знаходження найбільшого числа в цьому масиві.
-// let arrayNum[];
-// let arrayLength = +prompt('задай length = число від 3 до 10');
-// for (let i = 0; i < arrayLength; i++) {
-//     const arrayNum[i] = +prompt('задай значення для елементу масива ${i}');
-// }
-//   console.log (arrayNum);
 
-let arrayLength = +prompt('задай length = число від 3 до 10');
+
+const array = [];
+const arrayLength = prompt('задай length = число від 3 до 10');
 for (let i = 0; i < arrayLength; i++) {
-    let arrayNum[i] = +prompt(`задай значення для елементу масива`);
+    let arrayNum = prompt(`задай значення для елементу масива`);
+    array.push(arrayNum);
 }
 let biggerNum;
 for (let i = 0; i < arrayLength-1; i++) {
-    biggerNum = (arrayNum[i] > arrayNum[i+1]) ? arrayNum[i] : arrayNum[i+1];
+    biggerNum = (array[i] > array[i+1]) ? array[i] : array[i+1];
 }
-console.log(biggerNum);
+console.log(array, biggerNum);
+alert(`Масив: ${array}, найбільший елемент: ${biggerNum}`);
 
-
-// const arrayNum = [3, 5, 15, 7, 0, 0];
-// for (let i = 0; i < arrayNum.length; i++) {
-//     const arrayNum[i] = +prompt('задай значення для елементу масива ${i}');
-//   }
-//  console.log (arrayNum);
-
-// let biggerNum;
-// for (let i = 0; i < arrayNum.length-1; i++) {
-//     biggerNum = (arrayNum[i] > arrayNum[i+1]) ? arrayNum[i] : arrayNum[i+1];
-// }
-// console.log(biggerNum);
