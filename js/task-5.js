@@ -22,14 +22,26 @@
 //     const arrayNum[i] = +prompt('задай значення для елементу масива ${i}');
 // }
 //   console.log (arrayNum);
-const arrayNum = [3, 5, 15, 7, 0, 0];
-for (let i = 0; i < arrayNum.length; i++) {
-    const arrayNum[i] = +prompt('задай значення для елементу масива ${i}');
-  }
- console.log (arrayNum);
 
+let arrayLength = +prompt('задай length = число від 3 до 10');
+for (let i = 0; i < arrayLength; i++) {
+    let arrayNum[i] = +prompt(`задай значення для елементу масива`);
+}
 let biggerNum;
-for (let i = 0; i < arrayNum.length-1; i++) {
+for (let i = 0; i < arrayLength-1; i++) {
     biggerNum = (arrayNum[i] > arrayNum[i+1]) ? arrayNum[i] : arrayNum[i+1];
 }
 console.log(biggerNum);
+
+
+// const arrayNum = [3, 5, 15, 7, 0, 0];
+// for (let i = 0; i < arrayNum.length; i++) {
+//     const arrayNum[i] = +prompt('задай значення для елементу масива ${i}');
+//   }
+//  console.log (arrayNum);
+
+// let biggerNum;
+// for (let i = 0; i < arrayNum.length-1; i++) {
+//     biggerNum = (arrayNum[i] > arrayNum[i+1]) ? arrayNum[i] : arrayNum[i+1];
+// }
+// console.log(biggerNum);
