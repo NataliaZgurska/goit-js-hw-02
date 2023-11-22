@@ -144,10 +144,54 @@
 // console.log(arrayMutual);   array = toReversed(array);
 
 
-function createReversedArray() {
-  array=Array.from(arguments);
-    array = array.toReversed();
-  return array;
-}
-createReversedArray(12, 85, 10, 37, 4, 1, 5);
-console.log(array);
+// function createReversedArray() {
+//   array=Array.from(arguments);
+//     array = array.toReversed();
+//   return array;
+// }
+// createReversedArray(1, 2, 3, 4, 5);
+// console.log(array);
+
+// Обчислення факторіалу: Запитайте користувача, для якого числа він хоче знайти
+// факторіал, і використайте цикл для обчислення факторіалу цього числа.
+// const num = Number.parseInt(prompt('введіть число'));
+// let factorialNum = 1
+// if (num>0) {
+//   for (let i = 1; i <=num; i++) {
+//   factorialNum*=i;
+//   console.log(factorialNum);
+//   }
+//   alert(`${num}!=${factorialNum}`);
+// } else {
+//   alert(`error!!!`);
+// }
+
+//  Гра в аріфметичну прогресію: Створіть програму, яка виводить перші 10 членів
+//    арифметичної прогресії з заданим початковим членом і кроком.
+
+// const firstNum = Number(prompt('введіть перше число арифм.прогресії'));
+// const step = Number(prompt('введіть крок прогресії'));  
+// let array = [firstNum];
+//  for (let i = 1; i < 9; i++) {
+//    array.push(firstNum + i * step);
+//    console.log(array);
+// }
+// alert(array);
+
+//  Гра в геометричну прогресію: Створіть програму, яка виводить перші 10 членів
+//    геометричної прогресії з заданим початковим членом і знаменником.
+
+// const firstNum = Number(prompt('введіть перше число геометричної прогресії'));
+// const step = Number(prompt('введіть знаменник прогресії'));  
+// let array = [firstNum];
+//  for (let i = 1; i < 9; i++) {
+//    array.push(firstNum * Math.pow(step,i));
+//    console.log(array);
+// }
+// alert(array);
+
+// Генерація псевдовипадкових чисел: Використовуючи цикл, згенеруйте та виведіть
+//    п'ять псевдовипадкових цілих чисел у заданому діапазоні.
+const firstNum = Number.parseFloat(prompt('введіть перше число діапазона'));
+const lastNum = Number.parseFloat(prompt('введіть останнє число діапазона')); 
+Math.random 
