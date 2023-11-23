@@ -190,8 +190,84 @@
 // }
 // alert(array);
 
-// Генерація псевдовипадкових чисел: Використовуючи цикл, згенеруйте та виведіть
+// 6. Генерація псевдовипадкових чисел: Використовуючи цикл, згенеруйте та виведіть
 //    п'ять псевдовипадкових цілих чисел у заданому діапазоні.
-const firstNum = Number.parseFloat(prompt('введіть перше число діапазона'));
-const lastNum = Number.parseFloat(prompt('введіть останнє число діапазона')); 
-Math.random 
+// const firstNum = Number.parseFloat(prompt('введіть перше число діапазона'));
+// const lastNum = Number.parseFloat(prompt('введіть останнє число діапазона'));
+// let array = [];
+// for (let i = 0; i < 5; i++) {
+//   let element = Math.round(Math.random() * (lastNum - firstNum)) + firstNum;
+//   array.push(element)
+//   console.log(element, typeof(element),array);
+// }
+// alert(`масив випадкових чисел від ${firstNum} до ${lastNum}: ${array}`);
+ 
+// без повторів
+// const firstNum = Number.parseFloat(prompt('введіть перше число діапазона'));
+// const lastNum = Number.parseFloat(prompt('введіть останнє число діапазона'));
+// let array = [];
+// if (lastNum-firstNum<5) {
+//   alert('Діапазон занадто малий')
+// } else {
+//   while (array.length<5){
+//     let element = Math.round(Math.random() * (lastNum - firstNum)) + firstNum;
+//     if (!array.includes(element)) {
+//       array.push(element);
+//       console.log(element, typeof(element),array);
+//     }
+//   }
+//   alert(`масив випадкових чисел від ${firstNum} до ${lastNum}: ${array}`);
+// }
+
+// 7. Підрахунок суми деякої умови: Підрахуйте суму всіх чисел від 1 до 100, які є
+//    кратними або 3, або 5.
+// let total = 0;
+// for (let i = 1; i <= 100; i++) {
+//   if (i%3===0 ||i%5===0) {
+//     total += i;
+//     console.log(i, total)
+//   }
+// }
+// console.log(total);
+
+// 8. Побудова ромба з символів: Створіть програму, яка будує ромб з символів '\*'
+//    заданого розміру.
+// форма ромбу якщо: Math.abs(i) + Math.abs(j) == h
+// const h = Number(prompt('введіть розмір ромбу'));
+// // вертикальная ось
+// for (let i = -h; i <= h; i++) {
+//   // строка символов
+//   let line = '';
+//   // горизонтальная ось
+//   for (let j = -h; j <= h; j++) {
+//     // когда точка принадлежит ромбу
+//     if (Math.abs(i) + Math.abs(j) == h) {
+//       line += '\*';
+//     } else {
+//       line += ' ';
+//     }
+//   }
+//   // выводим строку
+//   console.log(line);
+// }
+
+
+// 9. Перевірка паліндромів: Запитайте користувача про слово і визначте, чи є це
+//    слово паліндромом (читається однаково зліва направо і справа наліво).
+let strName = prompt('Введіть слово');
+let array1 = strName.split("");
+let array2 = array1.toReversed();
+ console.log(array1, array2);
+
+for (let i = 0; i < array1.length; i++) {
+  if (array1[i]!==array2[i]) {
+    console.log(array[i]);
+    alert('не паліндром');
+    break;
+  } else {
+    alert('паліндром');
+    break;
+  }
+  
+}
+
