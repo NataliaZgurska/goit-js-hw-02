@@ -254,22 +254,22 @@
 
 // 9. Перевірка паліндромів: Запитайте користувача про слово і визначте, чи є це
 //    слово паліндромом (читається однаково зліва направо і справа наліво).
-let strName = prompt('Введіть слово');
-strNameNew = strName.replace(/ /g, ''); 
-console.log(strNameNew);
+// let strName = prompt('Введіть слово');
+// strNameNew = strName.replace(/ /g, ''); 
+// console.log(strNameNew);
 
-let array1 = strNameNew.split("");
-let array2 = array1.toReversed();
- console.log(array1, array2);
-let check = "паліндром"
+// let array1 = strNameNew.split("");
+// let array2 = array1.toReversed();
+//  console.log(array1, array2);
+// let check = "паліндром"
  
-for (let i = 0; i < array1.length; i++) {
-  if (array1[i]!==array2[i]) {
-    console.log(array1[i], array2[i]);
-    check = "не паліндром";
-    break;
-  } 
-    }
-  alert(`${strName} - це ${check}`); 
+// for (let i = 0; i < array1.length; i++) {
+//   if (array1[i]!==array2[i]) {
+//     console.log(array1[i], array2[i]);
+//     check = "не паліндром";
+//     break;
+//   } 
+//     }
+//   alert(`${strName} - це ${check}`); 
 
 
