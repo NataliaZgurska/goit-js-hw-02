@@ -446,36 +446,36 @@ const users = [
 // const carAmountYear = cars.map(car => console.log(`Машин ${car.year}: ${car.amount} кількість`));
 // ---------------------------------------------------------
 // просумувати кількість машин за роком
-// масив років машин за зрозтанням: 
-const carYear = cars
-    .map(car => car.year)
-    .filter((year, index, Array) => Array.indexOf(year) === index)
-    .toSorted((a,b) => a-b)
-console.log(carYear);
+// масив років машин за зрозтанням:
+// const carYear = cars
+//     .map(car => car.year)
+//     .filter((year, index, Array) => Array.indexOf(year) === index)
+//     .toSorted((a,b) => a-b)
+// console.log(carYear);
 
 
-// масив кількісті машин певного року
-const carAmount = []
-for (const year of carYear) {
-    let yearAmount = 0
-    for (const car of cars) {
-   if (car.year === year) {
-     yearAmount += car.amount 
-   }
-    }
-   carAmount.push(yearAmount) 
-}
-console.log(carAmount);
+// // масив кількісті машин певного року
+// const carAmount = []
+// for (const year of carYear) {
+//     let yearAmount = 0
+//     for (const car of cars) {
+//    if (car.year === year) {
+//      yearAmount += car.amount
+//    }
+//     }
+//    carAmount.push(yearAmount)
+// }
+// console.log(carAmount);
 
-const carYearAmount = []
-for (let i = 0; i < carYear.length; i++) {
-    let pair = {
-        'year': carYear[i],
-        'amount': carAmount[i]
-    }
-  carYearAmount.push(pair)  
-}
-console.table(carYearAmount);
+// const carYearAmount = []
+// for (let i = 0; i < carYear.length; i++) {
+//     let pair = {
+//         'year': carYear[i],
+//         'amount': carAmount[i]
+//     }
+//   carYearAmount.push(pair)
+// }
+// console.table(carYearAmount);
 
 // const students = [
 //     { name: 'Mango', score: 80, },
@@ -487,25 +487,99 @@ console.table(carYearAmount);
 // console.log(totalScore);
 
 // -------------------------------------------
+
 // Знайти найдорожчу машину.
+// const mostExpensiveCar = allCars => allCars
+//   .map(car => car.price)
+//   .toSorted((a, b) => b-a)
+// console.log(mostExpensiveCar(cars)[0]);
+
+// -------------------------------------------
 // Знайти всі машини заданої марки (наприклад, Toyota).
+// const carMake = (allCars, make) => allCars.filter(car => car.make === make)
+// console.log(carMake(cars, 'Honda'));
+
+// -------------------------------------------
 // Порахувати загальну кількість машин усіх типів.
+// const carAmount = allCars => allCars.reduce((totalAmount, car) => totalAmount + car.amount, 0)
+// console.log(carAmount(cars));
+// -------------------------------------------
 // Відсортувати машини за ціною (від найдешевшої до найдорожчої).
-// Знайти всі машини певного типу (наприклад, SUV).
-// Знайти всі машини певного кольору та року випуску.
+// const carPriceRating = allCars => allCars.toSorted((a,b) => a.price - b.price)
+// console.log(carPriceRating(cars));
+
+// -------------------------------------------
+// Знайти всі машини певного типу (наприклад, SUV).  type: 'suv',
+// const carAsking = (allCars, type) => allCars
+//   .filter(car => car.type === type)
+//   .toSorted((a,b) => b.year - a.year)
+// console.log(carAsking(cars, 'sedan'));
+
+// -------------------------------------------
+// Знайти всі машини певного кольору та року випуску. color: 'black',   year: 2010,
+// const carAsking = (allCars, color, year) => allCars
+//   .filter(car => car.color === color & car.year >= year)
+//   .toSorted((a,b) => b.price - a.price)
+// console.log(carAsking(cars, 'black', 2000))
+
+// -------------------------------------------
 // Порахувати середню ціну всіх машин.
+// const totalPrice = cars.reduce((total, car) => total + car.price * car.amount, 0)
+// const carAmount = cars.reduce((totalAmount, car) => totalAmount + car.amount, 0)
+// const averagePrice = totalPrice/carAmount
+// console.log(`Загальна варстість машин: ${totalPrice}, \nзагальна кількість машин: ${carAmount}, \nсередня ціна: ${averagePrice}`)
+ 
+// -------------------------------------------
 // Знайти всі машини, у яких кількість на складі більша за 0.
+// const carAsking = (allCars, amount) => allCars.filter(car => car.amount >= amount)
+// console.log(carAsking(cars,10));
+
+// -------------------------------------------
 // Знайти всі машини з ціною менше 30000 та роком випуску після 2020 року.
+// const carAsking = (allCars, price, year) => allCars.filter(car => car.price<=price & car.year>=year)
+// console.log(carAsking(cars, 30000, 2020));
+
+// -------------------------------------------
 // Порахувати сумарну кількість всіх машин заданої марки.
+// const carAsking = (allCars, type) => allCars
+//   .filter(car => car.type === type)
+//   .reduce((total, car) => total + car.amount,0)
+// console.log(carAsking(cars, 'sedan'));
+
+// -------------------------------------------
 // Відсортувати машини за кількістю на складі (від найбільшої до найменшої).
-// Знайти всі машини, які не є спортивними та доступні для продажу.
+// const carAsking = allCars => allCars.toSorted((a,b) => a.amount - b.amount)
+// console.log(carAsking(cars));
+
+
+// -------------------------------------------
+// Знайти всі машини, які не є спортивними та доступні для продажу. onSale: true, isSportcar: true,
+// const carAsking = allCars => allCars.filter(car => car.onSale&!car.isSportcar)
+// console.log(carAsking(cars));
+
+// -------------------------------------------
 // Порахувати загальну вартість всіх машин складі.
+// -------------------------------------------
 // Знайти всі машини певного типу та кольору.
-// Відсортувати машини за брендом та моделлю в алфавітному порядку.
+// -------------------------------------------
+// Відсортувати машини за брендом та моделлю в алфавітному порядку. make: 'Ford',    model: 'Explorer',
+// const carAsking = allCars => allCars
+//   .toSorted((a, b) => a.make.localeCompare(b.make))
+// console.log(carAsking(cars));
+
+// -------------------------------------------
 // Перевірити, чи є хоч одна машина зеленого кольору.
+const carAsking = (allCars, color) => allCars
+  .some(car => car.color === color)
+console.log(carAsking(cars, 'pink'));
+// -------------------------------------------
 // Створити новий масив, що містить лише назви моделей усіх машин.
 // Створити масив, що містить розмітку кожної машини.
 // Знайти індекс першої машини з роком випуску 2022 року.
+
+
+
+
 // Знайти всі машини з ціною вище 50000 і відсортувати їх за роком випуску від нових до старих.
 // Перевірити, чи всі машини на складі доступні для продажу та створити новий масив, що містить лише моделі доступних машин.
 // Знайти першу машину, яка не є спортивною та має кількість на на складі більше 0, потім повернути її колір.
