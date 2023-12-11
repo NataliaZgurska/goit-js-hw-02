@@ -569,22 +569,54 @@ const users = [
 
 // -------------------------------------------
 // Перевірити, чи є хоч одна машина зеленого кольору.
-const carAsking = (allCars, color) => allCars
-  .some(car => car.color === color)
-console.log(carAsking(cars, 'pink'));
+// const carAsking = (allCars, color) => allCars
+//   .some(car => car.color === color)
+// console.log(carAsking(cars, 'pink'));
 // -------------------------------------------
 // Створити новий масив, що містить лише назви моделей усіх машин.
 // Створити масив, що містить розмітку кожної машини.
 // Знайти індекс першої машини з роком випуску 2022 року.
 
+// const carAsking = (allCars, year) => allCars.findLastIndex(car => car.year === year)
+// console.log(carAsking(cars, 2022));
 
-
-
+// -------------------------------------------
 // Знайти всі машини з ціною вище 50000 і відсортувати їх за роком випуску від нових до старих.
+// const carAsking = (allCars, price) => allCars
+//   .filter(car => car.price >= price)
+//   .toSorted((a,b) => b.year - a.year)
+
+// console.log(carAsking(cars, 30000));
+
+// -------------------------------------------
 // Перевірити, чи всі машини на складі доступні для продажу та створити новий масив, що містить лише моделі доступних машин.
+//  model: 'CR-V', onSale: true,
+// const carAsking = allCars => allCars
+//   .filter(car => car.onSale)
+//   .map(car => car.model)
+// console.log(carAsking(cars));
+
+// -------------------------------------------
 // Знайти першу машину, яка не є спортивною та має кількість на на складі більше 0, потім повернути її колір.
+// const carAsking = (allCars, amount) => allCars
+//   .find(car => !car.isSportcar & car.amount > amount).color
+// console.log(carAsking(cars, 10));
+
+// -------------------------------------------
 // Порахувати загальну вартість всіх машин із кількістю на складі більше 2 і ціною менше 40 000.
-// Знайти всі машини певного типу (наприклад, SUV), відсортувати їх за роком випуску від старих до нових і повернути масив тільки зі своїми моделями.
+// const carAsking = (allCars, amount, price) => allCars
+//   .filter(car => car.amount >= amount & car.price <= price)
+//   .reduce((totalPrice, car) => totalPrice + car.amount * car.price,0)
+// console.log(carAsking(cars, 2, 25000));
+
+// Знайти всі машини певного типу (наприклад, SUV), відсортувати їх за роком випуску від старих до нових 
+// і повернути масив тільки зі своїми моделями.
+const carAsking = (allCars, type) => allCars
+  .filter(car => car.type === type)
+  .toSorted((a,b) => a.year - b.year)
+  .map(car => car.model)
+console.log(carAsking(cars, 'suv'));
+
 // Знайти всі спортивні машини з ціною вище 60000, відсортувати їх за спаданням ціни і повернути масив, що містить лише бренди цих машин.
 // Знайти всі машини заданого кольору (наприклад, "Blue") та року випуску після 2020, відсортувати їх за зростанням ціни і повернути масив, що містить лише моделі цих машин.
 // Перевірити, чи всі машини заданої марки доступні для продажу та повернути масив, що містить лише кольори доступних машин.
